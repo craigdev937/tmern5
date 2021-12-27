@@ -1,8 +1,12 @@
 import express from "express";
-import { HomeIndex } from "../controllers/playCon";
+import { CreatePlayer, FetchAllPlayers, GetOnePlayer, UpdatePlayer, 
+    DeletePlayer } from "../controllers/playCon";
 
 export const playRt: express.Router = express.Router();
-    playRt.get("/", HomeIndex);
-
+    playRt.post("/", CreatePlayer);
+    playRt.get("/", FetchAllPlayers);
+    playRt.get("/:id", GetOnePlayer);
+    playRt.put("/:id", UpdatePlayer);
+    playRt.delete("/:id", DeletePlayer);
 
 
