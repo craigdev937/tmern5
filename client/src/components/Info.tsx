@@ -10,7 +10,7 @@ export const Info = ({ player }: Props): JSX.Element => {
     return (
         <React.Fragment>
             <h2><Link 
-                to={`/edit/${player._id}`}
+                to={`/players/edit/${player._id}`}
                     >{player.title}
                 </Link>
             </h2>

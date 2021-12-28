@@ -5,7 +5,7 @@ export interface IPlayer {
     lastname: string,
     age: number,
     info: string,
-    file?: IPlayer,
+    player?: IPlayer,
 };
 
 
