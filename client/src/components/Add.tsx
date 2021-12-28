@@ -25,7 +25,7 @@ export const Add = (): JSX.Element => {
             lastname: "", age: 0, info: ""
         });
         navigate("/");
-    };
+    };   
 
     return (
         <React.Fragment>
