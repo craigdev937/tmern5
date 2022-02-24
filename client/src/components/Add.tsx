@@ -1,14 +1,12 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { PlayerAPI } from "../global/PlayerAPI";
+import { IPlayer } from "../models/IPlayer";
 
 export const Add = (): JSX.Element => {
     const navigate = useNavigate();
     const [addPlayer] = PlayerAPI.useCreateMutation();
-    const [player, setPlayer] = React.useState({
-        _id: "", title: "", firstname: "", 
-        lastname: "", age: 0, info: ""
-    });
+    const [player, setPlayer] = React.useState({} as IPlayer);
 
     const handleChange = 
     (event: React.ChangeEvent<HTMLInputElement>) => {
